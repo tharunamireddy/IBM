@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Questions - IBM Campus Drive Prep</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <h2>IBM Prep Guide</h2>
+                <span class="badge">SRMIST</span>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coding-questions.html" class="active">Coding Questions</a></li>
+                <li><a href="hr-questions.html">HR Questions</a></li>
+                <li><a href="topics.html">Topics to Master</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container page-content">
+        <header class="page-header">
+            <h1>Coding & Technical Questions</h1>
+            <p>Sample problems based on recent IBM campus drive experiences</p>
+        </header>
+
+        <div class="filter-section">
+            <button class="filter-btn active" onclick="filterQuestions('all')">All Questions</button>
+            <button class="filter-btn" onclick="filterQuestions('easy')">Easy</button>
+            <button class="filter-btn" onclick="filterQuestions('medium')">Medium</button>
+            <button class="filter-btn" onclick="filterQuestions('hard')">Hard</button>
+        </div>
+
+        <section class="section">
+            <h2 class="section-title">Arrays & Strings</h2>
+            
+            <div class="question-card" data-difficulty="easy">
+                <div class="question-header">
+                    <h3>1. Check if String is Palindrome</h3>
+                    <span class="difficulty-badge easy">Easy</span>
+                </div>
+                <p class="question-desc">Write a program to check if a string is a palindrome (ignoring non-alphanumeric characters and case).</p>
+                <button class="toggle-btn" onclick="toggleContent(this)">Show Solution</button>
+                <div class="solution-content">
+                    <pre><code>// JavaScript Solution
+function isPalindrome(str) {
+    // Remove non-alphanumeric and convert to lowercase
+    const cleaned = str.replace(/[^a-z0-9]/gi, '').toLowerCase();
+    
+    // Compare with reversed string
+    const reversed = cleaned.split('').reverse().join('');
+    return cleaned === reversed;
+}
+
+// Alternative two-pointer approach
+function isPalindromeTwoPointer(str) {
+    const cleaned = str.replace(/[^a-z0-9]/gi, '').toLowerCase();
+    let left = 0;
+    let right = cleaned.length - 1;
+    
+    while (left < right) {
+        if (cleaned[left] !== cleaned[right]) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
+}
+
+// Test cases
+console.log(isPalindrome("A man, a plan, a canal: Panama")); // true
+console.log(isPalindrome("race a car")); // false</code></pre>
+                    <div class="complexity">
+                        <strong>Time Complexity:</strong> O(n) | <strong>Space Complexity:</strong> O(n)
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-card" data-difficulty="medium">
+                <div class="question-header">
+                    <h3>2. String Compression</h3>
+                    <span class="difficulty-badge medium">Medium</span>
+                </div>
+                <p class="question-desc">Given a string like "abbcddeee", output "ab2cd2e3" (compress repeated adjacent characters with counts).</p>
+                <button class="toggle-btn" onclick="toggleContent(this)">Show Solution</button>
+                <div class="solution-content">
+                    <pre><code>// JavaScript Solution
+function compressString(str) {
+    if (!str) return '';
+    
+    let result = '';
+    let count = 1;
+    
+    for (let i = 0; i < str.length; i++) {
+        // Check if current char matches next char
+        if (i + 1 < str.length && str[i] === str[i + 1]) {
+            count++;
+        } else {
+            // Add character and count (if > 1) to result
+            result += str[i];
+            if (count > 1) {
+                result += count;
+            }
+            count = 1;
+        }
+    }
+    
+    return result;
+}
+
+// Test cases
+console.log(compressString("abbcddeee")); // "ab2cd2e3"
+console.log(compressString("aabcccccaaa")); // "a2bc5a3"
+console.log(compressString("abc")); // "abc"</code></pre>
+                    <div class="complexity">
+                        <strong>Time Complexity:</strong> O(n) | <strong>Space Complexity:</strong> O(n)
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-card" data-difficulty="easy">
+                <div class="question-header">
+                    <h3>3. Find Largest Element in Array</h3>
+                    <span class="difficulty-badge easy">Easy</span>
+                </div>
+                <p class="question-desc">Find the largest element in an unsorted array.</p>
+                <button class="toggle-btn" onclick="toggleContent(this)">Show Solution</button>
+                <div class="solution-content">
+                    <pre><code>// JavaScript Solution
+function findLargest(arr) {
+    if (arr.length === 0) return null;
+    
+    let max = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
+// Using built-in method
+function findLargestBuiltIn(arr) {
+    return Math.max(...arr);
+}
+
+// Test cases
+console.log(findLargest([3, 1, 4, 1, 5, 9, 2, 6])); // 9
+console.log(findLargest([-5, -2, -10, -1])); // -1</code></pre>
+                    <div class="complexity">
+                        <strong>Time Complexity:</strong> O(n) | <strong>Space Complexity:</strong> O(1)
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-card" data-difficulty="medium">
+                <div class="question-header">
+                    <h3>4. Reverse a String</h3>
+                    <span class="difficulty-badge medium">Medium</span>
+                </div>
+                <p class="question-desc">Reverse a string in-place (if possible in your language).</p>
+                <button class="toggle-btn" onclick="toggleContent(this)">Show Solution</button>
+                <div class="solution-content">
+                    <pre><code>// JavaScript Solution - Multiple Approaches
+function reverseString1(str) {
+    return str.split('').reverse().join('');
+}
+
+function reverseString2(str) {
+    let reversed = '';
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+    return reversed;
+}
+
+function reverseString3(str) {
+    return [...str].reduceRight((acc, char) => acc + char, '');
+}
+
+// Test cases
+console.log(reverseString1("hello")); // "olleh"
+console.log(reverseString2("world")); // "dlrow"</code></pre>
+                    <div class="complexity">
+                        <strong>Time Complexity:</strong> O(n) | <strong>Space Complexity:</strong> O(n)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Data Structures</h2>
+            
+            <div class="question-card" data-difficulty="medium">
+                <div class="question-header">
+                    <h3>5. Implement a Stack</h3>
+                    <span class="difficulty-badge medium">Medium</span>
+                </div>
+                <p class="question-desc">Implement a stack with push, pop, peek, and isEmpty operations.</p>
+                <button class="toggle-btn" onclick="toggleContent(this)">Show Solution</button>
+                <div class="solution-content">
+                    <pre><code>// JavaScript Solution
+class Stack {
+    constructor() {
+        this.items = [];
+    }
+    
+    push(element) {
+        this.items.push(element);
+    }
+    
+    pop() {
+        if (this.isEmpty()) {
+            return null;
+        }
+        return this.items.pop();
+    }
+    
+    peek() {
+        if (this.isEmpty()) {
+            return null;
+        }
+        return this.items[this.items.length - 1];
+    }
+    
+    isEmpty() {
+        return this.items.length === 0;
+    }
+    
+    size() {
+        return this.items.length;
+    }
+    
+    clear() {
+        this.items = [];
+    }
+}
+
+// Test cases
+const stack = new Stack();
+stack.push(10);
+stack.push(20);
+stack.push(30);
+console.log(stack.peek()); // 30
+console.log(stack.pop());  // 30
+console.log(stack.size()); // 2</code></pre>
+                    <div class="complexity">
+                        <strong>Time Complexity:</strong> O(1) for all operations | <strong>Space Complexity:</strong> O(n)
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-card" data-difficulty="medium">
+                <div class="question-header">
+                    <h3>6. Implement a Queue</h3>
+                    <span class="difficulty-badge medium">Medium</span>
+                </div>
+                <p class="question-desc">Implement a queue with enqueue, dequeue, front, and isEmpty operations.</p>
+                <button class="toggle-btn" onclick="toggleContent(this)">Show Solution</button>
+                <div class="solution-content">
+                    <pre><code>// JavaScript Solution
+class Queue {
+    constructor() {
+        this.items = [];
+    }
+    
+    enqueue(element) {
+        this.items.push(element);
+    }
+    
+    dequeue() {
+        if (this.isEmpty()) {
+            return null;
+        }
+        return this.items.shift();
+    }
+    
+    front() {
+        if (this.isEmpty()) {
+            return null;
+        }
+        return this.items[0];
+    }
+    
+    isEmpty() {
+        return this.items.length === 0;
+    }
+    
+    size() {
+        return this.items.length;
+    }
+}
+
+// Test cases
+const queue = new Queue();
+queue.enqueue(1);
+queue.enqueue(2);
+queue.enqueue(3);
+console.log(queue.front());   // 1
+console.log(queue.dequeue()); // 1
+console.log(queue.size());    // 2</code></pre>
+                    <div class="complexity">
+                        <strong>Time Complexity:</strong> O(1) for enqueue, O(n) for dequeue | <strong>Space Complexity:</strong> O(n)
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-card" data-difficulty="hard">
+                <div class="question-header">
+                    <h3>7. Detect Cycle in Linked List</h3>
+                    <span class="difficulty-badge hard">Hard</span>
+                </div>
+                <p class="question-desc">Given a linked list, determine if it has a cycle in it.</p>
+                <button class="toggle-btn" onclick="toggleContent(this)">Show Solution</button>
+                <div class="solution-content">
+                    <pre><code>// JavaScript Solution - Floyd's Cycle Detection
+class ListNode {
+    constructor(val) {
+        this.val = val;
+        this.next = null;
+    }
+}
+
+function hasCycle(head) {
+    if (!head || !head.next) {
+        return false;
+    }
+    
+    let slow = head;
+    let fast = head;
+    
+    while (fast && fast.next) {
+        slow = slow.next;
+        fast = fast.next.next;
+        
+        if (slow === fast) {
+            return true;
+        }
+    }
+    
+    return false;
+}
+
+// Test case
+const node1 = new ListNode(3);
+const node2 = new ListNode(2);
+const node3 = new ListNode(0);
+const node4 = new ListNode(-4);
+
+node1.next = node2;
+node2.next = node3;
+node3.next = node4;
+node4.next = node2; // Creates cycle
+
+console.log(hasCycle(node1)); // true</code></pre>
+                    <div class="complexity">
+                        <strong>Time Complexity:</strong> O(n) | <strong>Space Complexity:</strong> O(1)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Searching & Sorting</h2>
+            
+            <div class="question-card" data-difficulty="medium">
+                <div class="question-header">
+                    <h3>8. Binary Search</h3>
+                    <span class="difficulty-badge medium">Medium</span>
+                </div>
+                <p class="question-desc">Implement binary search to find an element in a sorted array.</p>
+                <button class="toggle-btn" onclick="toggleContent(this)">Show Solution</button>
+                <div class="solution-content">
+                    <pre><code>// JavaScript Solution - Iterative
+function binarySearch(arr, target) {
+    let left = 0;
+    let right = arr.length - 1;
+    
+    while (left <= right) {
+        const mid = Math.floor((left + right) / 2);
+        
+        if (arr[mid] === target) {
+            return mid;
+        } else if (arr[mid] < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+    
+    return -1; // Not found
+}
+
+// Recursive approach
+function binarySearchRecursive(arr, target, left = 0, right = arr.length - 1) {
+    if (left > right) {
+        return -1;
+    }
+    
+    const mid = Math.floor((left + right) / 2);
+    
+    if (arr[mid] === target) {
+        return mid;
+    } else if (arr[mid] < target) {
+        return binarySearchRecursive(arr, target, mid + 1, right);
+    } else {
+        return binarySearchRecursive(arr, target, left, mid - 1);
+    }
+}
+
+// Test cases
+const arr = [1, 3, 5, 7, 9, 11, 13, 15];
+console.log(binarySearch(arr, 7));  // 3
+console.log(binarySearch(arr, 10)); // -1</code></pre>
+                    <div class="complexity">
+                        <strong>Time Complexity:</strong> O(log n) | <strong>Space Complexity:</strong> O(1) iterative, O(log n) recursive
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Technical Concepts (Common Interview Questions)</h2>
+            
+            <div class="concept-card">
+                <h3>Shallow vs Deep Copy (C++)</h3>
+                <div class="concept-content">
+                    <p><strong>Shallow Copy:</strong> Copies the object's pointer, both objects share the same memory address. Changes in one affect the other.</p>
+                    <p><strong>Deep Copy:</strong> Creates a new copy of the object with separate memory. Changes in one don't affect the other.</p>
+                    <pre><code>// C++ Example
+class Example {
+public:
+    int* data;
+    
+    // Shallow copy (default copy constructor)
+    Example(const Example& obj) {
+        data = obj.data; // Both point to same memory
+    }
+    
+    // Deep copy
+    Example deepCopy(const Example& obj) {
+        Example newObj;
+        newObj.data = new int;
+        *newObj.data = *obj.data; // Separate memory
+        return newObj;
+    }
+};</code></pre>
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <h3>Virtual Keyword in C++</h3>
+                <div class="concept-content">
+                    <p>The <strong>virtual</strong> keyword enables runtime polymorphism. It allows a derived class to override a base class method.</p>
+                    <pre><code>// C++ Example
+class Base {
+public:
+    virtual void display() {
+        cout << "Base class" << endl;
+    }
+};
+
+class Derived : public Base {
+public:
+    void display() override {
+        cout << "Derived class" << endl;
+    }
+};
+
+// Usage
+Base* ptr = new Derived();
+ptr->display(); // Outputs: "Derived class"</code></pre>
+                    <p><strong>V-Table (Virtual Table):</strong> A lookup table of function pointers used to resolve virtual function calls at runtime.</p>
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <h3>OOP Principles</h3>
+                <div class="concept-content">
+                    <ul>
+                        <li><strong>Encapsulation:</strong> Bundling data and methods that operate on that data within a class</li>
+                        <li><strong>Inheritance:</strong> Creating new classes from existing ones (is-a relationship)</li>
+                        <li><strong>Polymorphism:</strong> Ability to take multiple forms (method overloading/overriding)</li>
+                        <li><strong>Abstraction:</strong> Hiding complex implementation details and showing only essential features</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="index.html" class="nav-btn">← Back to Home</a>
+            <a href="hr-questions.html" class="nav-btn">HR Questions →</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>IBM Prep Guide</h3>
+                <p>Comprehensive preparation resource for IBM campus drives at SRMIST</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coding-questions.html">Coding Questions</a></li>
+                    <li><a href="hr-questions.html">HR Questions</a></li>
+                    <li><a href="topics.html">Topics to Master</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="https://leetcode.com" target="_blank">LeetCode</a></li>
+                    <li><a href="https://www.geeksforgeeks.org" target="_blank">GeeksforGeeks</a></li>
+                    <li><a href="https://prepinsta.com" target="_blank">PrepInsta</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 IBM Prep Guide. For educational purposes.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

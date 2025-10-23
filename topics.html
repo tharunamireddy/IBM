@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topics to Master - IBM Campus Drive Prep</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <h2>IBM Prep Guide</h2>
+                <span class="badge">SRMIST</span>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coding-questions.html">Coding Questions</a></li>
+                <li><a href="hr-questions.html">HR Questions</a></li>
+                <li><a href="topics.html" class="active">Topics to Master</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container page-content">
+        <header class="page-header">
+            <h1>Topics to Master</h1>
+            <p>Comprehensive curriculum for IBM campus drive preparation</p>
+        </header>
+
+        <div class="study-plan-banner">
+            <h3>📅 Recommended Study Plan</h3>
+            <div class="timeline-plan">
+                <div class="plan-item">
+                    <strong>Week 1-2:</strong> DSA Fundamentals (Arrays, Strings, Basic Algorithms)
+                </div>
+                <div class="plan-item">
+                    <strong>Week 3-4:</strong> Advanced DSA (Trees, Graphs, Dynamic Programming)
+                </div>
+                <div class="plan-item">
+                    <strong>Week 5:</strong> Programming Language Deep Dive & OOP
+                </div>
+                <div class="plan-item">
+                    <strong>Week 6:</strong> CS Theory (OS, DBMS, Networking)
+                </div>
+                <div class="plan-item">
+                    <strong>Week 7:</strong> Aptitude & Verbal Practice
+                </div>
+                <div class="plan-item">
+                    <strong>Week 8:</strong> Mock Tests & Project Revision
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2 class="section-title">1. Data Structures & Algorithms</h2>
+            <p class="section-intro">Master these topics with at least 100+ problems solved</p>
+            
+            <div class="topic-accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-title">Arrays & Strings</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <h4>Key Concepts:</h4>
+                        <ul>
+                            <li>Array manipulation and traversal</li>
+                            <li>Two-pointer technique</li>
+                            <li>Sliding window problems</li>
+                            <li>String manipulation (reversal, palindrome, anagram)</li>
+                            <li>Pattern matching (KMP, Rabin-Karp basics)</li>
+                        </ul>
+                        <h4>Must-Practice Problems:</h4>
+                        <ul>
+                            <li>Find largest/smallest element</li>
+                            <li>Reverse an array/string</li>
+                            <li>Check palindrome</li>
+                            <li>Two sum problem</li>
+                            <li>Maximum subarray sum (Kadane's)</li>
+                            <li>String compression</li>
+                        </ul>
+                        <h4>Resources:</h4>
+                        <div class="resource-links">
+                            <a href="https://leetcode.com/tag/array/" target="_blank" class="resource-btn">LeetCode Arrays</a>
+                            <a href="https://www.geeksforgeeks.org/array-data-structure/" target="_blank" class="resource-btn">GFG Arrays</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-title">Linked Lists</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <h4>Key Concepts:</h4>
+                        <ul>
+                            <li>Singly and doubly linked lists</li>
+                            <li>Insertion and deletion operations</li>
+                            <li>Cycle detection (Floyd's algorithm)</li>
+                            <li>Reversing a linked list</li>
+                            <li>Merging two sorted lists</li>
+                        </ul>
+                        <h4>Must-Practice Problems:</h4>
+                        <ul>
+                            <li>Reverse a linked list</li>
+                            <li>Detect cycle in linked list</li>
+                            <li>Find middle element</li>
+                            <li>Merge two sorted lists</li>
+                            <li>Remove nth node from end</li>
+                        </ul>
+                        <h4>Resources:</h4>
+                        <div class="resource-links">
+                            <a href="https://leetcode.com/tag/linked-list/" target="_blank" class="resource-btn">LeetCode Linked List</a>
+                            <a href="https://www.geeksforgeeks.org/data-structures/linked-list/" target="_blank" class="resource-btn">GFG Linked List</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-title">Stacks & Queues</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <h4>Key Concepts:</h4>
+                        <ul>
+                            <li>Stack operations (push, pop, peek)</li>
+                            <li>Queue operations (enqueue, dequeue)</li>
+                            <li>Implementing stack using arrays/linked lists</li>
+                            <li>Implementing queue using stacks</li>
+                            <li>Priority queues (heap-based)</li>
+                        </ul>
+                        <h4>Must-Practice Problems:</h4>
+                        <ul>
+                            <li>Valid parentheses</li>
+                            <li>Next greater element</li>
+                            <li>Implement stack/queue</li>
+                            <li>Min/max stack</li>
+                            <li>LRU cache</li>
+                        </ul>
+                        <h4>Resources:</h4>
+                        <div class="resource-links">
+                            <a href="https://leetcode.com/tag/stack/" target="_blank" class="resource-btn">LeetCode Stack/Queue</a>
+                            <a href="https://www.geeksforgeeks.org/stack-data-structure/" target="_blank" class="resource-btn">GFG Stack</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-title">Trees & Binary Search Trees</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <h4>Key Concepts:</h4>
+                        <ul>
+                            <li>Tree traversals (inorder, preorder, postorder, level-order)</li>
+                            <li>Binary search tree operations</li>
+                            <li>Height and depth of tree</li>
+                            <li>Lowest common ancestor</li>
+                            <li>Balanced trees (AVL basics)</li>
+                        </ul>
+                        <h4>Must-Practice Problems:</h4>
+                        <ul>
+                            <li>Tree traversals (all types)</li>
+                            <li>Maximum depth of binary tree</li>
+                            <li>Validate BST</li>
+                            <li>Lowest common ancestor</li>
+                            <li>Binary tree level order traversal</li>
+                        </ul>
+                        <h4>Resources:</h4>
+                        <div class="resource-links">
+                            <a href="https://leetcode.com/tag/tree/" target="_blank" class="resource-btn">LeetCode Trees</a>
+                            <a href="https://www.geeksforgeeks.org/binary-tree-data-structure/" target="_blank" class="resource-btn">GFG Trees</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-title">Graphs (Basics)</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <h4>Key Concepts:</h4>
+                        <ul>
+                            <li>Graph representation (adjacency matrix, adjacency list)</li>
+                            <li>BFS (Breadth-First Search)</li>
+                            <li>DFS (Depth-First Search)</li>
+                            <li>Cycle detection</li>
+                            <li>Shortest path (Dijkstra basics)</li>
+                        </ul>
+                        <h4>Must-Practice Problems:</h4>
+                        <ul>
+                            <li>BFS and DFS traversal</li>
+                            <li>Number of islands</li>
+                            <li>Detect cycle in graph</li>
+                            <li>Clone a graph</li>
+                            <li>Course schedule (topological sort)</li>
+                        </ul>
+                        <h4>Resources:</h4>
+                        <div class="resource-links">
+                            <a href="https://leetcode.com/tag/graph/" target="_blank" class="resource-btn">LeetCode Graphs</a>
+                            <a href="https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/" target="_blank" class="resource-btn">GFG Graphs</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-title">Sorting & Searching</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <h4>Key Concepts:</h4>
+                        <ul>
+                            <li>Sorting algorithms (bubble, selection, insertion, merge, quick)</li>
+                            <li>Binary search and variations</li>
+                            <li>Time complexity analysis</li>
+                            <li>Stable vs unstable sorting</li>
+                        </ul>
+                        <h4>Must-Practice Problems:</h4>
+                        <ul>
+                            <li>Implement binary search</li>
+                            <li>First and last position in sorted array</li>
+                            <li>Search in rotated sorted array</li>
+                            <li>Merge sort implementation</li>
+                            <li>Quick sort implementation</li>
+                        </ul>
+                        <h4>Resources:</h4>
+                        <div class="resource-links">
+                            <a href="https://leetcode.com/tag/binary-search/" target="_blank" class="resource-btn">LeetCode Searching</a>
+                            <a href="https://www.geeksforgeeks.org/sorting-algorithms/" target="_blank" class="resource-btn">GFG Sorting</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">2. Programming Language Fundamentals</h2>
+            <p class="section-intro">Choose ONE language and master it (Java, C++, or Python)</p>
+            
+            <div class="language-tabs">
+                <button class="lang-tab active" onclick="switchLanguage('java')">Java</button>
+                <button class="lang-tab" onclick="switchLanguage('cpp')">C++</button>
+                <button class="lang-tab" onclick="switchLanguage('python')">Python</button>
+            </div>
+
+            <div id="java-content" class="lang-content active">
+                <h3>Java Essentials</h3>
+                <div class="topic-list">
+                    <div class="topic-item">
+                        <h4>Core Concepts</h4>
+                        <ul>
+                            <li>OOP principles (Encapsulation, Inheritance, Polymorphism, Abstraction)</li>
+                            <li>Classes and Objects</li>
+                            <li>Constructors and Destructors</li>
+                            <li>Access modifiers (public, private, protected)</li>
+                            <li>Static and final keywords</li>
+                        </ul>
+                    </div>
+                    <div class="topic-item">
+                        <h4>Advanced Topics</h4>
+                        <ul>
+                            <li>Interfaces vs Abstract classes</li>
+                            <li>Exception handling (try-catch-finally)</li>
+                            <li>Collections Framework (ArrayList, HashMap, HashSet)</li>
+                            <li>Generics</li>
+                            <li>Multithreading basics</li>
+                            <li>Lambda expressions and Streams</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cpp-content" class="lang-content">
+                <h3>C++ Essentials</h3>
+                <div class="topic-list">
+                    <div class="topic-item">
+                        <h4>Core Concepts</h4>
+                        <ul>
+                            <li>Pointers and References</li>
+                            <li>Memory management (new, delete)</li>
+                            <li>OOP in C++</li>
+                            <li>Constructors and Destructors</li>
+                            <li>Operator overloading</li>
+                        </ul>
+                    </div>
+                    <div class="topic-item">
+                        <h4>Advanced Topics</h4>
+                        <ul>
+                            <li>Virtual functions and V-table</li>
+                            <li>Shallow vs Deep copy</li>
+                            <li>STL (Standard Template Library): vectors, maps, sets</li>
+                            <li>Templates and Generic programming</li>
+                            <li>Exception handling</li>
+                            <li>Smart pointers (unique_ptr, shared_ptr)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="python-content" class="lang-content">
+                <h3>Python Essentials</h3>
+                <div class="topic-list">
+                    <div class="topic-item">
+                        <h4>Core Concepts</h4>
+                        <ul>
+                            <li>Data types and structures</li>
+                            <li>Functions and lambda expressions</li>
+                            <li>OOP in Python (classes, inheritance)</li>
+                            <li>List comprehensions</li>
+                            <li>Decorators basics</li>
+                        </ul>
+                    </div>
+                    <div class="topic-item">
+                        <h4>Advanced Topics</h4>
+                        <ul>
+                            <li>Generators and iterators</li>
+                            <li>Exception handling</li>
+                            <li>File I/O operations</li>
+                            <li>Collections module (Counter, defaultdict)</li>
+                            <li>Regular expressions</li>
+                            <li>Modules and packages</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">3. Computer Science Theory</h2>
+            
+            <div class="cs-theory-grid">
+                <div class="theory-card">
+                    <h3>Operating Systems</h3>
+                    <ul>
+                        <li><strong>Process Management:</strong> Process vs Thread, scheduling algorithms (FCFS, SJF, Round Robin)</li>
+                        <li><strong>Memory Management:</strong> Paging, segmentation, virtual memory</li>
+                        <li><strong>Deadlock:</strong> Conditions, prevention, avoidance</li>
+                        <li><strong>File Systems:</strong> Directory structure, file allocation</li>
+                        <li><strong>Synchronization:</strong> Mutex, semaphores, critical section</li>
+                    </ul>
+                </div>
+
+                <div class="theory-card">
+                    <h3>Database Management Systems</h3>
+                    <ul>
+                        <li><strong>SQL Basics:</strong> SELECT, INSERT, UPDATE, DELETE, JOINs</li>
+                        <li><strong>Normalization:</strong> 1NF, 2NF, 3NF, BCNF</li>
+                        <li><strong>Transactions:</strong> ACID properties</li>
+                        <li><strong>Indexing:</strong> B-trees, B+ trees</li>
+                        <li><strong>Keys:</strong> Primary, Foreign, Candidate, Composite</li>
+                    </ul>
+                </div>
+
+                <div class="theory-card">
+                    <h3>Computer Networks</h3>
+                    <ul>
+                        <li><strong>OSI Model:</strong> 7 layers and their functions</li>
+                        <li><strong>TCP/IP:</strong> TCP vs UDP, 3-way handshake</li>
+                        <li><strong>HTTP/HTTPS:</strong> Request/Response, status codes</li>
+                        <li><strong>IP Addressing:</strong> IPv4, subnetting basics</li>
+                        <li><strong>DNS:</strong> Domain Name System working</li>
+                    </ul>
+                </div>
+
+                <div class="theory-card">
+                    <h3>Software Engineering</h3>
+                    <ul>
+                        <li><strong>SDLC:</strong> Waterfall, Agile, Scrum</li>
+                        <li><strong>Design Patterns:</strong> Singleton, Factory, Observer (basics)</li>
+                        <li><strong>Version Control:</strong> Git basics (commit, push, pull, merge)</li>
+                        <li><strong>Testing:</strong> Unit testing, integration testing</li>
+                        <li><strong>SOLID Principles:</strong> Basic understanding</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">4. Aptitude & Verbal Reasoning</h2>
+            
+            <div class="aptitude-grid">
+                <div class="aptitude-card">
+                    <h3>Quantitative Aptitude</h3>
+                    <ul>
+                        <li><strong>Number Series:</strong> Finding patterns and next terms</li>
+                        <li><strong>Time & Work:</strong> Individual and combined work problems</li>
+                        <li><strong>Time, Speed & Distance:</strong> Basic calculations</li>
+                        <li><strong>Percentages:</strong> Profit/loss, discounts</li>
+                        <li><strong>Ratios & Proportions:</strong> Direct and inverse</li>
+                        <li><strong>Probability:</strong> Basic probability concepts</li>
+                        <li><strong>Permutations & Combinations:</strong> Arrangements</li>
+                    </ul>
+                    <div class="resource-links">
+                        <a href="https://www.indiabix.com/aptitude/questions-and-answers/" target="_blank" class="resource-btn">IndiaBix Aptitude</a>
+                        <a href="https://prepinsta.com/aptitude/" target="_blank" class="resource-btn">PrepInsta Aptitude</a>
+                    </div>
+                </div>
+
+                <div class="aptitude-card">
+                    <h3>Logical Reasoning</h3>
+                    <ul>
+                        <li><strong>Pattern Recognition:</strong> Visual and numerical patterns</li>
+                        <li><strong>Series Completion:</strong> Letter and number series</li>
+                        <li><strong>Blood Relations:</strong> Family tree problems</li>
+                        <li><strong>Coding-Decoding:</strong> Pattern-based encoding</li>
+                        <li><strong>Seating Arrangements:</strong> Linear and circular</li>
+                        <li><strong>Syllogisms:</strong> Logical conclusions</li>
+                        <li><strong>Puzzles:</strong> Logic-based problem solving</li>
+                    </ul>
+                </div>
+
+                <div class="aptitude-card">
+                    <h3>Verbal Ability</h3>
+                    <ul>
+                        <li><strong>Vocabulary:</strong> Synonyms, antonyms, idioms</li>
+                        <li><strong>Grammar:</strong> Sentence correction, tenses</li>
+                        <li><strong>Reading Comprehension:</strong> Passage-based questions</li>
+                        <li><strong>Sentence Completion:</strong> Fill in blanks</li>
+                        <li><strong>Para Jumbles:</strong> Sentence rearrangement</li>
+                        <li><strong>Error Spotting:</strong> Grammatical errors</li>
+                    </ul>
+                    <div class="resource-links">
+                        <a href="https://www.indiabix.com/verbal-ability/questions-and-answers/" target="_blank" class="resource-btn">IndiaBix Verbal</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">5. Practice Resources</h2>
+            
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h3>🖥️ Coding Practice</h3>
+                    <ul>
+                        <li><a href="https://leetcode.com" target="_blank">LeetCode</a> - 150+ problems (Easy + Medium)</li>
+                        <li><a href="https://www.geeksforgeeks.org" target="_blank">GeeksforGeeks</a> - DSA tutorials and problems</li>
+                        <li><a href="https://www.hackerrank.com" target="_blank">HackerRank</a> - Interview preparation kit</li>
+                        <li><a href="https://www.codechef.com" target="_blank">CodeChef</a> - Practice problems</li>
+                    </ul>
+                </div>
+
+                <div class="resource-card">
+                    <h3>📚 Aptitude Practice</h3>
+                    <ul>
+                        <li><a href="https://prepinsta.com" target="_blank">PrepInsta</a> - Company-specific tests</li>
+                        <li><a href="https://www.indiabix.com" target="_blank">IndiaBix</a> - Topic-wise aptitude</li>
+                        <li><a href="https://www.faceprep.in" target="_blank">FacePrep</a> - Mock tests</li>
+                    </ul>
+                </div>
+
+                <div class="resource-card">
+                    <h3>📖 Theory & Concepts</h3>
+                    <ul>
+                        <li><a href="https://www.geeksforgeeks.org/dbms/" target="_blank">GFG DBMS</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/operating-systems/" target="_blank">GFG OS</a></li>
+                        <li><a href="https://www.tutorialspoint.com" target="_blank">TutorialsPoint</a> - All CS topics</li>
+                    </ul>
+                </div>
+
+                <div class="resource-card">
+                    <h3>🎥 Video Tutorials</h3>
+                    <ul>
+                        <li>YouTube - Abdul Bari (Algorithms)</li>
+                        <li>YouTube - Jenny's Lectures (DBMS, OS)</li>
+                        <li>YouTube - Apna College (DSA)</li>
+                        <li>YouTube - Love Babbar (Interview prep)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="final-tips">
+                <h2 class="section-title">Final Preparation Checklist</h2>
+                <div class="checklist">
+                    <label class="checklist-item">
+                        <input type="checkbox" onclick="saveProgress()">
+                        <span>Solved 100+ DSA problems (mix of easy and medium)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" onclick="saveProgress()">
+                        <span>Strong grasp of one programming language (Java/C++/Python)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" onclick="saveProgress()">
+                        <span>Revised OS, DBMS, Networking basics</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" onclick="saveProgress()">
+                        <span>Practiced 50+ aptitude questions</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" onclick="saveProgress()">
+                        <span>Can explain my project in detail (STAR method)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" onclick="saveProgress()">
+                        <span>Prepared answers for common HR questions</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" onclick="saveProgress()">
+                        <span>Researched IBM's values, culture, and recent projects</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" onclick="saveProgress()">
+                        <span>Taken at least 2 full mock tests</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" onclick="saveProgress()">
+                        <span>Resume is updated and error-free</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" onclick="saveProgress()">
+                        <span>Have 2-3 questions ready to ask the interviewer</span>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="hr-questions.html" class="nav-btn">← HR Questions</a>
+            <a href="index.html" class="nav-btn">Back to Home →</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>IBM Prep Guide</h3>
+                <p>Comprehensive preparation resource for IBM campus drives at SRMIST</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coding-questions.html">Coding Questions</a></li>
+                    <li><a href="hr-questions.html">HR Questions</a></li>
+                    <li><a href="topics.html">Topics to Master</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="https://leetcode.com" target="_blank">LeetCode</a></li>
+                    <li><a href="https://www.geeksforgeeks.org" target="_blank">GeeksforGeeks</a></li>
+                    <li><a href="https://prepinsta.com" target="_blank">PrepInsta</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 IBM Prep Guide. For educational purposes.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

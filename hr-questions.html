@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Questions - IBM Campus Drive Prep</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <h2>IBM Prep Guide</h2>
+                <span class="badge">SRMIST</span>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coding-questions.html">Coding Questions</a></li>
+                <li><a href="hr-questions.html" class="active">HR Questions</a></li>
+                <li><a href="topics.html">Topics to Master</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container page-content">
+        <header class="page-header">
+            <h1>HR & Behavioural Questions</h1>
+            <p>Common questions asked in IBM campus recruitment HR rounds</p>
+        </header>
+
+        <div class="tips-banner">
+            <h3>💡 HR Interview Tips</h3>
+            <ul>
+                <li>Be honest and authentic - don't memorize answers</li>
+                <li>Use the STAR method (Situation, Task, Action, Result) for behavioral questions</li>
+                <li>Research IBM's culture, values, and recent projects before the interview</li>
+                <li>Prepare 2-3 good questions to ask the interviewer</li>
+                <li>Maintain good eye contact and positive body language</li>
+            </ul>
+        </div>
+
+        <section class="section">
+            <h2 class="section-title">About Yourself</h2>
+            
+            <div class="hr-question-card">
+                <div class="question-header">
+                    <h3>1. Tell me about yourself</h3>
+                    <span class="frequency-badge high">Most Asked</span>
+                </div>
+                <div class="answer-section">
+                    <h4>How to Answer:</h4>
+                    <p>Follow this structure: Present → Past → Future (30-60 seconds)</p>
+                    <ul>
+                        <li><strong>Present:</strong> Current role/education and key skills</li>
+                        <li><strong>Past:</strong> Relevant experiences, projects, achievements</li>
+                        <li><strong>Future:</strong> Career goals and why this role fits</li>
+                    </ul>
+                    <button class="toggle-btn" onclick="toggleContent(this)">Show Sample Answer</button>
+                    <div class="sample-answer">
+                        <p><strong>Sample Answer:</strong></p>
+                        <p>"I'm currently a final-year Computer Science student at SRMIST with a strong foundation in data structures, algorithms, and software development. During my academics, I've worked on several projects including a [specific project] where I implemented [technologies], which improved [specific metric] by [percentage].</p>
+                        <p>In my recent internship at [Company], I gained hands-on experience with [technologies] and contributed to [specific achievement]. I'm particularly passionate about problem-solving and have solved over 200 DSA problems on LeetCode and GeeksforGeeks.</p>
+                        <p>I'm excited about IBM because of your innovative work in cloud computing and AI, and I see this role as an excellent opportunity to apply my technical skills while continuing to learn and grow in a global organization."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hr-question-card">
+                <div class="question-header">
+                    <h3>2. What are your strengths?</h3>
+                    <span class="frequency-badge high">Most Asked</span>
+                </div>
+                <div class="answer-section">
+                    <h4>How to Answer:</h4>
+                    <p>Choose 2-3 strengths relevant to the role and provide specific examples</p>
+                    <button class="toggle-btn" onclick="toggleContent(this)">Show Sample Answer</button>
+                    <div class="sample-answer">
+                        <p><strong>Sample Answer:</strong></p>
+                        <p>"One of my key strengths is problem-solving. During my final year project, we encountered a critical performance bottleneck. I analyzed the code, identified the issue was in our database queries, and optimized them by implementing indexing and caching, which reduced load time by 60%.</p>
+                        <p>Another strength is my ability to learn quickly. When our team decided to migrate our project from JavaScript to TypeScript, I took the initiative to learn TypeScript within a week and helped my teammates with the transition.</p>
+                        <p>I'm also a strong team player. In our college hackathon, I coordinated with four team members with different skill sets, delegated tasks effectively, and we secured second place among 50 teams."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hr-question-card">
+                <div class="question-header">
+                    <h3>3. What are your weaknesses?</h3>
+                    <span class="frequency-badge medium">Frequently Asked</span>
+                </div>
+                <div class="answer-section">
+                    <h4>How to Answer:</h4>
+                    <p>Choose a real weakness but show how you're working to improve it</p>
+                    <button class="toggle-btn" onclick="toggleContent(this)">Show Sample Answer</button>
+                    <div class="sample-answer">
+                        <p><strong>Sample Answer:</strong></p>
+                        <p>"Earlier, I used to struggle with public speaking and presenting my ideas in large groups. I realized this was limiting my ability to share technical concepts effectively.</p>
+                        <p>To address this, I've been actively working on it by volunteering to present in class seminars and joining the college's technical club where I've presented twice in front of 100+ students. While I still get a bit nervous, I've become much more confident and received positive feedback on my recent presentations.</p>
+                        <p>I've learned that preparation is key - when I thoroughly understand the topic and practice beforehand, I'm able to communicate much more effectively."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">About IBM & The Role</h2>
+            
+            <div class="hr-question-card">
+                <div class="question-header">
+                    <h3>4. Why do you want to work at IBM?</h3>
+                    <span class="frequency-badge high">Most Asked</span>
+                </div>
+                <div class="answer-section">
+                    <h4>How to Answer:</h4>
+                    <p>Research IBM's values, recent projects, and align them with your goals</p>
+                    <button class="toggle-btn" onclick="toggleContent(this)">Show Sample Answer</button>
+                    <div class="sample-answer">
+                        <p><strong>Sample Answer:</strong></p>
+                        <p>"I'm excited about IBM for several reasons. First, IBM's commitment to innovation, particularly in areas like AI, cloud computing, and quantum computing, aligns perfectly with my career interests. I've been following IBM's Watson AI platform and I'm impressed by its real-world applications in healthcare and business.</p>
+                        <p>Second, IBM's emphasis on continuous learning and employee development is very appealing. I know IBM offers extensive training programs and certification opportunities, which would help me grow professionally.</p>
+                        <p>Finally, IBM's global presence and diverse work culture would expose me to challenging projects and allow me to collaborate with talented professionals from around the world. The opportunity to work on enterprise-level solutions that impact millions of users is exactly the kind of meaningful work I'm looking for to start my career."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hr-question-card">
+                <div class="question-header">
+                    <h3>5. Why should we hire you?</h3>
+                    <span class="frequency-badge high">Most Asked</span>
+                </div>
+                <div class="answer-section">
+                    <h4>How to Answer:</h4>
+                    <p>Connect your skills and experiences to the job requirements</p>
+                    <button class="toggle-btn" onclick="toggleContent(this)">Show Sample Answer</button>
+                    <div class="sample-answer">
+                        <p><strong>Sample Answer:</strong></p>
+                        <p>"You should hire me because I bring a strong combination of technical skills, problem-solving ability, and eagerness to learn that aligns well with this role.</p>
+                        <p>Technically, I have a solid foundation in Java, Python, and data structures, which I've demonstrated through my academic projects and 250+ solved DSA problems. My final year project on [project name] showcases my ability to work with modern technologies and deliver functional solutions.</p>
+                        <p>Beyond technical skills, I'm highly adaptable and quick to learn. During my internship, I successfully picked up React and Node.js within two weeks and contributed to production code.</p>
+                        <p>Most importantly, I'm genuinely passionate about technology and committed to continuous improvement. I believe I would not only meet the expectations of this role but also grow with IBM and contribute to its continued success."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hr-question-card">
+                <div class="question-header">
+                    <h3>6. What do you know about IBM?</h3>
+                    <span class="frequency-badge medium">Frequently Asked</span>
+                </div>
+                <div class="answer-section">
+                    <h4>Key Points to Cover:</h4>
+                    <ul>
+                        <li><strong>Founded:</strong> 1911, over 100 years of innovation</li>
+                        <li><strong>Headquarters:</strong> Armonk, New York, USA</li>
+                        <li><strong>Key Business Areas:</strong> Cloud & Cognitive Software, Global Business Services, Systems, Global Financing</li>
+                        <li><strong>Notable Technologies:</strong> IBM Watson, IBM Cloud, Quantum Computing, Blockchain</li>
+                        <li><strong>Values:</strong> Innovation, Trust, Responsibility</li>
+                        <li><strong>Recent Initiatives:</strong> Hybrid cloud strategy, AI for business, Sustainability goals</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Career Goals & Future</h2>
+            
+            <div class="hr-question-card">
+                <div class="question-header">
+                    <h3>7. Where do you see yourself in 5 years?</h3>
+                    <span class="frequency-badge medium">Frequently Asked</span>
+                </div>
+                <div class="answer-section">
+                    <h4>How to Answer:</h4>
+                    <p>Show ambition while being realistic and aligned with company growth</p>
+                    <button class="toggle-btn" onclick="toggleContent(this)">Show Sample Answer</button>
+                    <div class="sample-answer">
+                        <p><strong>Sample Answer:</strong></p>
+                        <p>"In five years, I see myself as a skilled software engineer who has made significant contributions to IBM's projects and has grown both technically and professionally.</p>
+                        <p>In the short term (1-2 years), I want to master the technologies and processes at IBM, become proficient in the tech stack I'll be working with, and contribute effectively to my team's goals.</p>
+                        <p>In the medium term (3-4 years), I aim to take on more responsibilities, perhaps lead small projects or mentor junior developers, and deepen my expertise in areas like cloud architecture or AI/ML.</p>
+                        <p>By year five, I hope to be in a senior technical role where I can lead projects, make architectural decisions, and contribute to IBM's innovation. I'm also open to exploring different domains within IBM to broaden my skill set. Ultimately, I want to grow in a way that adds value to IBM while advancing my own career."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hr-question-card">
+                <div class="question-header">
+                    <h3>8. Are you open to relocating?</h3>
+                    <span class="frequency-badge medium">Frequently Asked</span>
+                </div>
+                <div class="answer-section">
+                    <h4>How to Answer:</h4>
+                    <p>Be honest about your flexibility and show willingness to adapt</p>
+                    <button class="toggle-btn" onclick="toggleContent(this)">Show Sample Answer</button>
+                    <div class="sample-answer">
+                        <p><strong>Sample Answer (if willing):</strong></p>
+                        <p>"Yes, I'm absolutely open to relocating. I understand that IBM has offices across India and globally, and I'm excited about the opportunity to work in different locations and experience new environments. I believe relocating would also help me grow professionally by exposing me to diverse work cultures and challenges. I have no constraints that would prevent relocation."</p>
+                        <p><strong>Sample Answer (if conditional):</strong></p>
+                        <p>"I'm open to relocating for the right opportunity. While I currently have some family commitments, I'm willing to discuss relocation options and would be flexible depending on the role and location. I see relocation as a valuable opportunity for professional growth and would certainly consider it seriously."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Project & Experience</h2>
+            
+            <div class="hr-question-card">
+                <div class="question-header">
+                    <h3>9. Tell me about your final year project</h3>
+                    <span class="frequency-badge high">Most Asked</span>
+                </div>
+                <div class="answer-section">
+                    <h4>How to Answer:</h4>
+                    <p>Use the STAR method: Situation, Task, Action, Result</p>
+                    <ul>
+                        <li><strong>Situation:</strong> What was the problem/need?</li>
+                        <li><strong>Task:</strong> What was your specific role?</li>
+                        <li><strong>Action:</strong> What technologies did you use? What challenges did you face?</li>
+                        <li><strong>Result:</strong> What was the outcome? Any metrics?</li>
+                    </ul>
+                    <button class="toggle-btn" onclick="toggleContent(this)">Show Sample Answer</button>
+                    <div class="sample-answer">
+                        <p><strong>Sample Answer:</strong></p>
+                        <p>"My final year project was a [Project Name] - an application designed to [purpose].</p>
+                        <p><strong>The Problem:</strong> We noticed that [specific problem], which affected [target users]. There was a need for a solution that could [specific need].</p>
+                        <p><strong>My Role:</strong> I was responsible for [your specific role - backend/frontend/full-stack] and led the team of [X] members. I designed the system architecture and implemented the core features.</p>
+                        <p><strong>Technologies Used:</strong> We used [tech stack - e.g., React for frontend, Node.js and Express for backend, MongoDB for database, deployed on AWS].</p>
+                        <p><strong>Challenges:</strong> One major challenge was [specific challenge]. To solve this, I [your solution].</p>
+                        <p><strong>Results:</strong> We successfully completed the project and it achieved [specific results - e.g., 95% accuracy, processed 1000+ requests, reduced time by 50%]. We also received [any recognition/grade] for our work."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hr-question-card">
+                <div class="question-header">
+                    <h3>10. Describe a challenging situation you faced and how you handled it</h3>
+                    <span class="frequency-badge medium">Frequently Asked</span>
+                </div>
+                <div class="answer-section">
+                    <h4>How to Answer:</h4>
+                    <p>Use STAR method and focus on your problem-solving approach</p>
+                    <button class="toggle-btn" onclick="toggleContent(this)">Show Sample Answer</button>
+                    <div class="sample-answer">
+                        <p><strong>Sample Answer:</strong></p>
+                        <p>"During our final year project, we faced a critical challenge two weeks before the deadline. Our application's database was becoming extremely slow as the data size increased, and we were worried about the demo.</p>
+                        <p><strong>Situation:</strong> The response time had increased from 2 seconds to 15 seconds, which was unacceptable.</p>
+                        <p><strong>Task:</strong> As the backend lead, I had to identify and fix the performance issue quickly.</p>
+                        <p><strong>Action:</strong> First, I used profiling tools to identify the bottleneck. I found that our queries weren't optimized and we had no indexing. I spent two days researching database optimization techniques, implemented proper indexing on frequently queried fields, optimized our queries by reducing unnecessary joins, and added caching for frequently accessed data.</p>
+                        <p><strong>Result:</strong> The changes reduced response time from 15 seconds to under 2 seconds even with larger datasets. This experience taught me the importance of performance considerations from the beginning and the value of profiling tools. Our project demo went smoothly and we received excellent feedback."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Questions to Ask the Interviewer</h2>
+            <div class="tips-box">
+                <p>Always prepare 2-3 good questions to ask. It shows your interest and engagement.</p>
+            </div>
+            <div class="questions-to-ask">
+                <h4>Good Questions:</h4>
+                <ul>
+                    <li>"What does a typical day look like for someone in this role?"</li>
+                    <li>"What are the biggest challenges facing the team right now?"</li>
+                    <li>"How does IBM support continuous learning and professional development for new hires?"</li>
+                    <li>"What technologies and tools does the team primarily work with?"</li>
+                    <li>"Can you tell me about the team structure and who I'd be working with?"</li>
+                    <li>"What are the key success metrics for this role in the first 6 months?"</li>
+                    <li>"How does IBM foster innovation and encourage new ideas from employees?"</li>
+                    <li>"What opportunities are there for career growth within IBM?"</li>
+                </ul>
+                <h4>Avoid Asking:</h4>
+                <ul>
+                    <li>Questions about salary/benefits in first interview (wait for HR to bring it up)</li>
+                    <li>Questions you could easily find on IBM's website</li>
+                    <li>"What does IBM do?" (shows lack of preparation)</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="coding-questions.html" class="nav-btn">← Coding Questions</a>
+            <a href="topics.html" class="nav-btn">Topics to Master →</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>IBM Prep Guide</h3>
+                <p>Comprehensive preparation resource for IBM campus drives at SRMIST</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coding-questions.html">Coding Questions</a></li>
+                    <li><a href="hr-questions.html">HR Questions</a></li>
+                    <li><a href="topics.html">Topics to Master</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="https://leetcode.com" target="_blank">LeetCode</a></li>
+                    <li><a href="https://www.geeksforgeeks.org" target="_blank">GeeksforGeeks</a></li>
+                    <li><a href="https://prepinsta.com" target="_blank">PrepInsta</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 IBM Prep Guide. For educational purposes.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
